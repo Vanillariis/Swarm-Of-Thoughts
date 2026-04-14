@@ -1,0 +1,41 @@
+#pragma kernel CSMain
+
+struct GrassData
+{
+    float4 position;
+};
+
+RWStructuredBuffer<GrassData> _GrassDataBuffer;
+float _GrassCount;
+float4x4 _LocalToWorld; // Passed from C#
+
+// Simple hash function to get "random" values from the instance ID
+float hash(uint x)
+{
+    x = ((x >> 16) ^ x) * 0x45d9f3b;
+    x = ((x >> 16) ^ x) * 0x45d9f3b;
+    x = (x >> 16) ^ x;
+    return (float) x / 4294967295.0;
+}
+
+[numthreads(64, 1, 1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= (uint) _GrassCount)
+        return;
+
+    // 1. Generate random local positions on a 1x1 area
+    // Unity's default Plane is 10x10 units, but we use -0.5 to 0.5 
+    // because the scale in the matrix handles the "10x" part.
+    float randomX = hash(id.x * 3) - 0.5;
+    float randomZ = hash(id.x * 7) - 0.5;
+    
+    // We use 10.0 here because Unity's primitive Plane is 10 units wide at scale 1
+    float4 localPos = float4(randomX * 10.0, 0, randomZ * 10.0, 1.0);
+
+    // 2. Transform local position to World Position using the Matrix
+    float4 worldPos = mul(_LocalToWorld, localPos);
+
+    // 3. Store result (keep the 'w' for scale or rotation if you want)
+    _GrassDataBuffer[id.x].position = worldPos;
+}
