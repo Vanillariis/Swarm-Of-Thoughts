@@ -65,7 +65,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Debug.Log("Enemy hit player!");
 
-            PlayerMovement player = collision.GetComponent<PlayerMovement>();
+            PlayerMovementShadow player = collision.GetComponent<PlayerMovementShadow>();
             player.playerHealth -= 1;
 
             manager.OnEnemyDestroyed(rt);

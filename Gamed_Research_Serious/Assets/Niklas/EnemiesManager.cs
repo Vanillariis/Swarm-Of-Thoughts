@@ -8,7 +8,7 @@ public class EnemiesManager : MonoBehaviour
     public GameObject player;
     public RectTransform canvas;
 
-    private PlayerMovement movement;
+    private PlayerMovementShadow movement;
     public List<RectTransform> activeEnemies = new List<RectTransform>();
 
     public StressControl stressControl;
@@ -24,7 +24,7 @@ public class EnemiesManager : MonoBehaviour
 
     void Start()
     {
-        movement = player.GetComponent<PlayerMovement>();
+        movement = player.GetComponent<PlayerMovementShadow>();
         StartCoroutine(StartWaveWithDelay());
         stressControl.spread = 0.6f;
 

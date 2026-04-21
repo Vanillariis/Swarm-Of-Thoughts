@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementShadow : MonoBehaviour
 {
 
     public float speed = 50f; // Speed of the player movement
