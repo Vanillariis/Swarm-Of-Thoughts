@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FlowerLogic : MonoBehaviour
+public class FlowerLogicAnton : MonoBehaviour
 {
     // [SerializeField] allows you to see this in the Inspector even if it's private
     [SerializeField] private string flowerMessage = "Default Message";

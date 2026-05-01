@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 542295019726899186}
   - component: {fileID: 876377693897474142}
   - component: {fileID: -5832175192207585873}
-  m_Layer: 0
+  - component: {fileID: -209538992383159846}
+  m_Layer: 8
   m_Name: Flower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +108,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -120,9 +121,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3948020927867556633}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97ce380cfd1b6de48a49b960da20af9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
   flowerMessage: Default Message
+--- !u!114 &-209538992383159846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3948020927867556633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac87641bca254d25918db8786a60e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerLogic

@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // This handles both Planting AND Interacting
-    public void Plant(InputAction.CallbackContext context)
+    /*public void Plant(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
 
@@ -49,6 +49,16 @@ public class PlayerMovement : MonoBehaviour
         {
             InteractWithFlower();
         }
+    }*/
+    
+    public void Plant(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+
+        Vector3 spawnPos = transform.position + transform.forward * plantDistance;
+        spawnPos.y = transform.position.y;
+
+        FlowerManager.Instance.PlantFlower(spawnPos);
     }
 
     private void PlantNewFlower()
@@ -62,18 +72,18 @@ public class PlayerMovement : MonoBehaviour
         placedFlower = flowerObj.GetComponent<FlowerLogic>();
 
         // Set the unique message (Logic you already have)
-        placedFlower.SetMessage("This is my unique flower message!");
+        //placedFlower.SetMessage("This is my unique flower message!");
 
         Debug.Log("Flower planted for the first time!");
     }
 
-    private void InteractWithFlower()
+    /*private void InteractWithFlower()
     {
         // Simply read the message from the flower we stored earlier
         string msg = placedFlower.GetMessage();
 
         Debug.Log("Interacting with flower! The message is: " + msg);
-    }
+    }*/
 
     private void ApplyMovement()
     {
