@@ -16,6 +16,10 @@ public class FlowerManager : MonoBehaviour
     [Header("Show Comment UI")]
     public GameObject showCommentPanel;
     public TMP_Text showCommentText;
+    
+    [Header("Audio")]
+    public AudioSource plantAudioSource;
+    public AudioClip plantSound;
 
     private FlowerSaveData saveData = new FlowerSaveData();
     private FlowerLogic pendingFlower;
@@ -39,10 +43,19 @@ public class FlowerManager : MonoBehaviour
 
     public void PlantFlower(Vector3 position)
     {
-        GameObject flowerPrefab = flowerPrefabs[Random.Range(0, flowerPrefabs.Length)];
-        GameObject flowerObj = Instantiate(flowerPrefab, position, Quaternion.identity);
+        if (flowerPrefabs == null || flowerPrefabs.Length == 0)
+            return;
+
+        GameObject prefab = flowerPrefabs[Random.Range(0, flowerPrefabs.Length)];
+        GameObject flowerObj = Instantiate(prefab, position, Quaternion.identity);
 
         pendingFlower = flowerObj.GetComponent<FlowerLogic>();
+
+        // 🔊 Play planting sound
+        if (plantAudioSource != null && plantSound != null)
+        {
+            plantAudioSource.PlayOneShot(plantSound);
+        }
 
         commentInputField.text = "";
         writeCommentPanel.SetActive(true);

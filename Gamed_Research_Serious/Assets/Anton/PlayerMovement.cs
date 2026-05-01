@@ -3,29 +3,34 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement")]
     public float speed = 5f;
     public float rotationSpeed = 10f;
 
     [Header("Flower Settings")]
-    public GameObject flowerPrefab;
     public float plantDistance = 1.5f;
 
-    // This stores our single flower reference
-    private FlowerLogic placedFlower;
+    [Header("Animation")]
+    public Animator animator;
+
+    [Header("Audio")]
+    public AudioSource walkingAudioSource;
 
     private Rigidbody rb;
     private Vector2 moveInput;
     private Vector3 moveDirection;
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         ApplyMovement();
         ApplyRotation();
+        HandleWalkingSound();
+        UpdateAnimation();
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -34,23 +39,6 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = new Vector3(moveInput.x, 0f, moveInput.y);
     }
 
-    // This handles both Planting AND Interacting
-    /*public void Plant(InputAction.CallbackContext context)
-    {
-        if (!context.performed) return;
-
-        // If we HAVEN'T planted a flower yet
-        if (placedFlower == null)
-        {
-            PlantNewFlower();
-        }
-        // If the flower ALREADY exists
-        else
-        {
-            InteractWithFlower();
-        }
-    }*/
-    
     public void Plant(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
@@ -61,41 +49,54 @@ public class PlayerMovement : MonoBehaviour
         FlowerManager.Instance.PlantFlower(spawnPos);
     }
 
-    private void PlantNewFlower()
-    {
-        Vector3 spawnPos = transform.position + (transform.forward * plantDistance);
-        spawnPos.y = transform.position.y; // Keep it on the ground
-
-        GameObject flowerObj = Instantiate(flowerPrefab, spawnPos, Quaternion.identity);
-
-        // Save the reference to the Flower component
-        placedFlower = flowerObj.GetComponent<FlowerLogic>();
-
-        // Set the unique message (Logic you already have)
-        //placedFlower.SetMessage("This is my unique flower message!");
-
-        Debug.Log("Flower planted for the first time!");
-    }
-
-    /*private void InteractWithFlower()
-    {
-        // Simply read the message from the flower we stored earlier
-        string msg = placedFlower.GetMessage();
-
-        Debug.Log("Interacting with flower! The message is: " + msg);
-    }*/
-
     private void ApplyMovement()
     {
-        rb.linearVelocity = new Vector3(moveDirection.x * speed, rb.linearVelocity.y, moveDirection.z * speed);
+        rb.linearVelocity = new Vector3(
+            moveDirection.x * speed,
+            rb.linearVelocity.y,
+            moveDirection.z * speed
+        );
     }
 
     private void ApplyRotation()
     {
-        if (moveDirection.sqrMagnitude > 0.01f)
+        if (moveDirection.sqrMagnitude <= 0.01f)
+            return;
+
+        Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+
+        rb.MoveRotation(
+            Quaternion.Slerp(
+                transform.rotation,
+                targetRotation,
+                rotationSpeed * Time.fixedDeltaTime
+            )
+        );
+    }
+
+    private void HandleWalkingSound()
+    {
+        if (walkingAudioSource == null)
+            return;
+
+        bool isMoving = moveDirection.sqrMagnitude > 0.01f;
+
+        if (isMoving && !walkingAudioSource.isPlaying)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            rb.MoveRotation(Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime));
+            walkingAudioSource.Play();
         }
+        else if (!isMoving && walkingAudioSource.isPlaying)
+        {
+            walkingAudioSource.Stop();
+        }
+    }
+
+    private void UpdateAnimation()
+    {
+        if (animator == null)
+            return;
+
+        bool isMoving = moveDirection.sqrMagnitude > 0.01f;
+        animator.SetBool("isRunning", isMoving);
     }
 }
