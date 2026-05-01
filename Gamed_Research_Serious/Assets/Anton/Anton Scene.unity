@@ -1671,15 +1671,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d0308bcfaac43a58e8725751c07f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Flower_Manager
-  flowerPrefab: {fileID: 3948020927867556633, guid: 5640a5d3d4a64d1469d9a7f6249342c0, type: 3}
+  flowerPrefabs:
+  - {fileID: 9069948650388196236, guid: 6ee7ff501548bbd48ac085a1c22904aa, type: 3}
+  - {fileID: 8457970020362098953, guid: b8cb555eb3a9a4e4988c1d6040aec95b, type: 3}
+  - {fileID: 4809857706931833784, guid: fe0901a4c5c7e624d9a28c1f47e24125, type: 3}
+  - {fileID: 4833647557030283328, guid: 25f6b3f9347e83047bc8481037fdb53b, type: 3}
   writeCommentPanel: {fileID: 364896912}
   commentInputField: {fileID: 462572946}
   showCommentPanel: {fileID: 1290039355}
   showCommentText: {fileID: 445353005}
-  mainCamera: {fileID: 2006838594}
-  flowerLayer:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!4 &967377953
 Transform:
   m_ObjectHideFlags: 0

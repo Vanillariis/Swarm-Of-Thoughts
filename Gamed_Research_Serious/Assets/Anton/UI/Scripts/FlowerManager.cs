@@ -6,8 +6,8 @@ public class FlowerManager : MonoBehaviour
 {
     public static FlowerManager Instance;
 
-    [Header("Flower")]
-    public GameObject flowerPrefab;
+    [Header("Flowers")]
+    public GameObject[] flowerPrefabs;
 
     [Header("Write Comment UI")]
     public GameObject writeCommentPanel;
@@ -39,7 +39,9 @@ public class FlowerManager : MonoBehaviour
 
     public void PlantFlower(Vector3 position)
     {
+        GameObject flowerPrefab = flowerPrefabs[Random.Range(0, flowerPrefabs.Length)];
         GameObject flowerObj = Instantiate(flowerPrefab, position, Quaternion.identity);
+
         pendingFlower = flowerObj.GetComponent<FlowerLogic>();
 
         commentInputField.text = "";
@@ -92,6 +94,8 @@ public class FlowerManager : MonoBehaviour
         foreach (FlowerData data in saveData.flowers)
         {
             Vector3 position = new Vector3(data.x, data.y, data.z);
+
+            GameObject flowerPrefab = flowerPrefabs[Random.Range(0, flowerPrefabs.Length)];
             GameObject flowerObj = Instantiate(flowerPrefab, position, Quaternion.identity);
 
             FlowerLogic flower = flowerObj.GetComponent<FlowerLogic>();
