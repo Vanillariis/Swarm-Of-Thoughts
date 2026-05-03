@@ -42,12 +42,28 @@ public class EnemiesManager : MonoBehaviour
     }
     public void UpdateSpread()
     {
-        float health01 = movement.playerHealth / 10f; // normalize (assuming max = 10)
+        float targetSpread;
 
-        // invert so low health = higher spread
-        float targetSpread = Mathf.Lerp(2.5f, 0.6f, health01);
+        if (isGameOver)
+        {
+            targetSpread = 0f;
+        }
+        else
+        {
+            float health01 = movement.playerHealth / 10f;
+            targetSpread = Mathf.Lerp(2.5f, 0.6f, health01);
+        }
 
-        stressControl.spread = Mathf.Lerp(stressControl.spread, targetSpread, Time.deltaTime * 5f);
+        stressControl.spread = Mathf.Lerp(
+            stressControl.spread,
+            targetSpread,
+            Time.deltaTime * 5f
+        );
+
+        //if (Mathf.Abs(stressControl.spread - targetSpread) < 0.01f)
+        //{
+        //    stressControl.spread = targetSpread;
+        //}
     }
     private void Update()
     {
@@ -59,6 +75,8 @@ public class EnemiesManager : MonoBehaviour
 
     public void SpawnEnemy()
     {
+        if (isGameOver) return;
+
         if (currentEnemies >= maxEnemies)
             return;
 
@@ -92,9 +110,9 @@ public class EnemiesManager : MonoBehaviour
     }
     public int GetMaxEnemies()
     {
-        if (movement.playerHealth >= 10) return 1;
-        if (movement.playerHealth >= 8) return 2;
-        if (movement.playerHealth >= 5) return 3;
+        if (stressControl.spread < 0.8f) return 1;
+        if (stressControl.spread > 0.8f && stressControl.spread < 1.2f) return 2;
+        if (stressControl.spread > 1.2f && stressControl.spread < 1.5f) return 3;
         return 4;
     }
     private bool IsFarEnough(Vector2 pos)
@@ -128,11 +146,12 @@ public class EnemiesManager : MonoBehaviour
 
     public void DeadEnd()
     {
-        if (movement.playerHealth <= 0 && !isGameOver)
+        if (stressControl.spread >= 2.2f && !isGameOver)
         {
             isGameOver = true;
 
             Debug.Log("You are too stressed!");
+            StopCoroutine(StartWaveWithDelay());
 
             // SceneManager.LoadScene("GameOver");
             // load scene skift her :)

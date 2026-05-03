@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1256937621155328052}
   - component: {fileID: 5302993950830110505}
   m_Layer: 5
-  m_Name: Enemy
+  m_Name: Enemy4
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f70348466176d39449fa6dd263ee3d9d, type: 3}
+  m_Texture: {fileID: 2800000, guid: 7dfbdce3899241648b7e156a1bb6951c, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
