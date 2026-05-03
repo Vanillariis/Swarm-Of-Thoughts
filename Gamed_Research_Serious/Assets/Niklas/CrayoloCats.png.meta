@@ -1,0 +1,1635 @@
+fileFormatVersion: 2
+guid: af0f1cabfc020cb4aa2644464ad536a1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CrayoloCats_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2221
+        width: 142
+        height: 318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677ef8afb12ca9a489ced27bb2f57b74
+      internalID: -1499667506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_1
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 2138
+        width: 155
+        height: 406
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb7dcb9c05cdba4ea45cff63f068afd
+      internalID: 2119613686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_2
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 2126
+        width: 143
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a07a5df6e635a94c8baf118523e3723
+      internalID: 1186957873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_3
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 2093
+        width: 112
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e02f8d309bd4fb40a033bb971e66cb8
+      internalID: 773771928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_4
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 2237
+        width: 58
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce88b3f74e99364289a933761102718
+      internalID: 2057837203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_5
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 2068
+        width: 73
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d28cc1eec08eed4e902e3f95b88f0ec
+      internalID: -299218727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_6
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 2064
+        width: 51
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34621d4a2fabb7841a500c56f6f239cc
+      internalID: 978024223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_7
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 2089
+        width: 60
+        height: 401
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a512cd7939515d84e930741b42f240c1
+      internalID: 2074246483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_8
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 2339
+        width: 174
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8413027751f9d4a874bf2442885a5b
+      internalID: 1833929311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_9
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 2345
+        width: 119
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fda54f20791da84faf26e69a790f6e3
+      internalID: -786574308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_10
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 2003
+        width: 118
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0efdcd9518fd3524c8f9aaadbce286cd
+      internalID: -289060186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_11
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 2082
+        width: 93
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e5edce382a7af409e8bddc1f9ff172
+      internalID: 1469270537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_12
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 2322
+        width: 196
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600e0199d6902c5469571b6d3cff18a1
+      internalID: -1942473506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_13
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 1994
+        width: 310
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa32ae1adc641042abda5a9852eb4e5
+      internalID: 455670385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_14
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 1860
+        width: 108
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebbac743c21075143ba3c78130aec02b
+      internalID: -1348315010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_15
+      rect:
+        serializedVersion: 2
+        x: 2004
+        y: 1829
+        width: 67
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f3edc772813824b999dfc5d73373f9
+      internalID: 947050776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_16
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 1941
+        width: 41
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5e18b590e687b4890317320bc76e99
+      internalID: -1557923494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_17
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 1893
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5187df89baf12ee4cb9e2895edd933c0
+      internalID: -1607627736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_18
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 1827
+        width: 238
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1ef416ff2fd294c8eaea8541ec75f0
+      internalID: -558930322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_19
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 1981
+        width: 189
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba09075f8373434a9408a217b5f0117
+      internalID: 90322728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_20
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 1902
+        width: 171
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8645d6a0f355ddf4db56cabe2a4de95f
+      internalID: -1724127204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_21
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 1777
+        width: 140
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a21fbd689121d44b443a364a69800a
+      internalID: -1932714887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_22
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1994
+        width: 200
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2591120245fa162418b1172a602a6ae4
+      internalID: -1840948931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_23
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1427
+        width: 729
+        height: 667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ca1aeba2e09184c9d31dc7713b1d85
+      internalID: 1310618856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_24
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 1522
+        width: 587
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918204138a9385c41a73a6147356f203
+      internalID: 1218309823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_25
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 1458
+        width: 279
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa0b731195a4df4dad6e32a14c98ec2
+      internalID: 1310337995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_26
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1190
+        width: 541
+        height: 308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e148611237b5ec4eaca2425e032554c
+      internalID: 1313537437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_27
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1135
+        width: 332
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4163b9dd3501c3845a7cda2a07457948
+      internalID: 488461446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_28
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1249
+        width: 156
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4eaf1f0815572429c2cc7eacbe411e
+      internalID: 742856496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_29
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1036
+        width: 112
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8781e4f27af1444878e6edb86f4e57
+      internalID: 1362552453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_30
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 975
+        width: 188
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6c3ca80272f734cac2b445590e8559
+      internalID: -812064527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_31
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 977
+        width: 98
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8132f869edd3e3c4585bd54d3c302b3d
+      internalID: 1619027308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_32
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 891
+        width: 414
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775a4847cc0640c47a34b11d20b8e4e4
+      internalID: 1482045582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_33
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1108
+        width: 339
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01dffa7f0b4084a4789f3907a758b1a4
+      internalID: 512159425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_34
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 911
+        width: 96
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2bbb441c6dbf34885207d2fe5e1e89
+      internalID: 704604030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_35
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 987
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e7c4588c86a3146834fb3a09e24931
+      internalID: -1357851556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_36
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 824
+        width: 146
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e87065d441f1643a4d88f6f603adc8
+      internalID: 127611367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_37
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 714
+        width: 225
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de26a5638b1c72d4cbb45dabf0126954
+      internalID: -1077199422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_38
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 720
+        width: 271
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee407c70ca364c048899fdbedb09e3ca
+      internalID: 1997069839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_39
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 691
+        width: 102
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee92905932235c4697100e5abec516a
+      internalID: -1168071221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_40
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 691
+        width: 175
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb459a147be70f4d8d8050f1c57ec87
+      internalID: -1851180060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_41
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 660
+        width: 254
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffcac92f6d00604e8d3ce05e98035b8
+      internalID: -942206293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_42
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 717
+        width: 167
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc67f4792fba4a4ab137f91bfbbbcd8
+      internalID: -802264734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_43
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 57
+        width: 677
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12c9f5db5761824793061f7b74f8ee4
+      internalID: 1248138369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_44
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 605
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e652a8324295eb4ab774bbc9252a6e4
+      internalID: 1353323475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_45
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 260
+        width: 266
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c653df187df512f4f8846aee18d025ea
+      internalID: 1365064097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_46
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 544
+        width: 232
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f11272dab27503a40a2b0f6baf5bbda8
+      internalID: -753030686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_47
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 538
+        width: 129
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf0dc89495024542adca21eb029b3ab
+      internalID: 478344452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_48
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 305
+        width: 184
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e75b7e171ecee42b94c53ec5021cb4
+      internalID: 1871361839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_49
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 62
+        width: 351
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510ec51ea57120a4c8c38c21b6f75f83
+      internalID: 1349194636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_50
+      rect:
+        serializedVersion: 2
+        x: 1845
+        y: 134
+        width: 83
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f43c8719fde3345adbb8b41bc68404
+      internalID: 1212899005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_51
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 269
+        width: 194
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cafc8977af2cfd345bf80f728ebfa7c6
+      internalID: -906018665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_52
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 458
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf5236b0ac127749a0e4626df3a239a
+      internalID: 1401831451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_53
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 330
+        width: 128
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d8f7b1021bf824393c5eb814bffeb9
+      internalID: 1780221402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_54
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 526
+        width: 142
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c76c0e294eb0c40a402bdb05c11be1
+      internalID: -1331313806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_55
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 527
+        width: 118
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db69a5336ada2f4fbc54bbbaff478eb
+      internalID: -1106653017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_56
+      rect:
+        serializedVersion: 2
+        x: 2043
+        y: 606
+        width: 58
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d834dd936465443af45dee56aae4a4
+      internalID: -1362303916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_57
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 527
+        width: 146
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ebaf1f3072cd84e974270add8a1c62
+      internalID: -1184244840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_58
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 397
+        width: 129
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d202d2c271b1f9547a43a94842ea7a62
+      internalID: 518615241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_59
+      rect:
+        serializedVersion: 2
+        x: 2177
+        y: 420
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64614a2ffcaf9da4d9df4282a66219f9
+      internalID: -234096774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_60
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 171
+        width: 212
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f029887da86494d9d87c6c7178cdea
+      internalID: -2117863082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_61
+      rect:
+        serializedVersion: 2
+        x: 2345
+        y: 587
+        width: 71
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ee5945b7530864c878add4d37dc5c3
+      internalID: 1158853868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_62
+      rect:
+        serializedVersion: 2
+        x: 2438
+        y: 581
+        width: 55
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e94f5efde10dd4d902f6b8fe37f151
+      internalID: -1653163438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCatsReal
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 687
+        width: 748
+        height: 1109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a280b6908f108e44f9c49f0e10a4e3c2
+      internalID: -1357630808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_63
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 1863
+        width: 79
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa4c1fd46ca8b6478ddea3db52c74fa
+      internalID: -1345632442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrayoloCats_64
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 600
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8baa25b0fd9df574f8d7918a4a9060c4
+      internalID: -2139690144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8de47c49356d8c2458a74c71d18bfa89
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CrayoloCatsReal: -1357630808
+      CrayoloCats_0: -1499667506
+      CrayoloCats_1: 2119613686
+      CrayoloCats_10: -289060186
+      CrayoloCats_11: 1469270537
+      CrayoloCats_12: -1942473506
+      CrayoloCats_13: 455670385
+      CrayoloCats_14: -1348315010
+      CrayoloCats_15: 947050776
+      CrayoloCats_16: -1557923494
+      CrayoloCats_17: -1607627736
+      CrayoloCats_18: -558930322
+      CrayoloCats_19: 90322728
+      CrayoloCats_2: 1186957873
+      CrayoloCats_20: -1724127204
+      CrayoloCats_21: -1932714887
+      CrayoloCats_22: -1840948931
+      CrayoloCats_23: 1310618856
+      CrayoloCats_24: 1218309823
+      CrayoloCats_25: 1310337995
+      CrayoloCats_26: 1313537437
+      CrayoloCats_27: 488461446
+      CrayoloCats_28: 742856496
+      CrayoloCats_29: 1362552453
+      CrayoloCats_3: 773771928
+      CrayoloCats_30: -812064527
+      CrayoloCats_31: 1619027308
+      CrayoloCats_32: 1482045582
+      CrayoloCats_33: 512159425
+      CrayoloCats_34: 704604030
+      CrayoloCats_35: -1357851556
+      CrayoloCats_36: 127611367
+      CrayoloCats_37: -1077199422
+      CrayoloCats_38: 1997069839
+      CrayoloCats_39: -1168071221
+      CrayoloCats_4: 2057837203
+      CrayoloCats_40: -1851180060
+      CrayoloCats_41: -942206293
+      CrayoloCats_42: -802264734
+      CrayoloCats_43: 1248138369
+      CrayoloCats_44: 1353323475
+      CrayoloCats_45: 1365064097
+      CrayoloCats_46: -753030686
+      CrayoloCats_47: 478344452
+      CrayoloCats_48: 1871361839
+      CrayoloCats_49: 1349194636
+      CrayoloCats_5: -299218727
+      CrayoloCats_50: 1212899005
+      CrayoloCats_51: -906018665
+      CrayoloCats_52: 1401831451
+      CrayoloCats_53: 1780221402
+      CrayoloCats_54: -1331313806
+      CrayoloCats_55: -1106653017
+      CrayoloCats_56: -1362303916
+      CrayoloCats_57: -1184244840
+      CrayoloCats_58: 518615241
+      CrayoloCats_59: -234096774
+      CrayoloCats_6: 978024223
+      CrayoloCats_60: -2117863082
+      CrayoloCats_61: 1158853868
+      CrayoloCats_62: -1653163438
+      CrayoloCats_63: -1345632442
+      CrayoloCats_64: -2139690144
+      CrayoloCats_7: 2074246483
+      CrayoloCats_8: 1833929311
+      CrayoloCats_9: -786574308
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
