@@ -816,6 +816,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1480011221414647099, guid: 9b4a04ccb64d7b4458771ec90a9e671b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2201110277754825573, guid: 9b4a04ccb64d7b4458771ec90a9e671b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -886,6 +890,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7601437641911925681, guid: 9b4a04ccb64d7b4458771ec90a9e671b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921694839141618051, guid: 9b4a04ccb64d7b4458771ec90a9e671b, type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1452,9 +1460,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GrassManager
   grassMaterial: {fileID: 2100000, guid: ec17e2425a30d23479f37f029305d311, type: 2}
   computeShader: {fileID: 7200000, guid: a81f7775d0a4aa64f9b9cadef7ce4f60, type: 3}
-  instanceCount: 4008
-  bladeWidth: 0.5
-  bladeHeight: 0.5
+  instanceCount: 6000
+  bladeWidth: 0.6
+  bladeHeight: 0.6
 --- !u!64 &1858759072
 MeshCollider:
   m_ObjectHideFlags: 0
