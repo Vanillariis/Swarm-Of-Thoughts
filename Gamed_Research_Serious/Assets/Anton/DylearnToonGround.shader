@@ -40,7 +40,7 @@ Shader "Custom/DylearnToonGround"
             #pragma vertex vert
             #pragma fragment frag
             
-            // Required to receive shadows and light data
+            // Required to receive shadows
             #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE
             #pragma multi_compile _ _SHADOWS_SOFT
 
@@ -58,7 +58,8 @@ Shader "Custom/DylearnToonGround"
                 float4 positionCS : SV_POSITION;
                 float3 positionWS : TEXCOORD0;
                 float3 normalWS : TEXCOORD1;
-                DECLARE_LIGHTMAP_OR_SHADOWCOORD(shadowCoord, 2);
+                // REPLACED MACRO: Manually define shadow coord
+                float4 shadowCoord : TEXCOORD2; 
             };
 
             CBUFFER_START(UnityPerMaterial)
@@ -74,10 +75,8 @@ Shader "Custom/DylearnToonGround"
             TEXTURE2D(_Albedo2Noise); SAMPLER(sampler_Albedo2Noise);
             TEXTURE2D(_Albedo3Noise); SAMPLER(sampler_Albedo3Noise);
 
-            // Placeholder Cloud Noise (Replaces the .gdshaderinc)
             float GetCloudNoise(float3 worldPos) {
                 float2 uv = worldPos.xz * _CloudScale + (_Time.y * _CloudSpeed);
-                // Simple pseudo-random/sine clouds
                 return saturate(sin(uv.x) * cos(uv.y) * 2.0 + 0.5);
             }
 
@@ -91,14 +90,15 @@ Shader "Custom/DylearnToonGround"
                 OUT.positionWS = posInputs.positionWS;
                 OUT.normalWS = normInputs.normalWS;
 
-                // Setup shadow coordinates for receiving shadows
-                OUTPUT_LIGHTMAP_OR_SHADOWCOORD(posInputs.positionWS, OUT.shadowCoord, 2);
+                // REPLACED MACRO: Standard URP shadow coordinate calculation
+                OUT.shadowCoord = GetShadowCoord(posInputs);
+                
                 return OUT;
             }
 
             half4 frag(Varyings IN) : SV_Target
             {
-                // 1. SELECT ALBEDO (Noise Threshold Logic)
+                // 1. SELECT ALBEDO
                 float a2_noise = SAMPLE_TEXTURE2D(_Albedo2Noise, sampler_Albedo2Noise, IN.positionWS.xz * _Albedo2Scale).r;
                 float a3_noise = SAMPLE_TEXTURE2D(_Albedo3Noise, sampler_Albedo3Noise, IN.positionWS.xz * _Albedo3Scale).r;
 
@@ -107,14 +107,13 @@ Shader "Custom/DylearnToonGround"
                 if (a3_noise > _Albedo3Threshold) baseAlbedo = _Albedo3.rgb;
 
                 // 2. GET LIGHT DATA
-                float4 shadowCoord = GetShadowCoord(IN);
-                Light mainLight = GetMainLight(shadowCoord);
+                // We use the shadowCoord we passed from the vertex shader
+                Light mainLight = GetMainLight(IN.shadowCoord);
                 float3 L = mainLight.direction;
                 float3 N = normalize(IN.normalWS);
 
-                // 3. DIFFUSE CALCULATION (Matching Godot Light logic)
+                // 3. DIFFUSE CALCULATION
                 float NdotL = dot(N, L);
-                // mainLight.distanceAttenuation handles falloff, shadowAttenuation handles shadows
                 float attenuation = mainLight.distanceAttenuation * mainLight.shadowAttenuation;
                 
                 float diffuse_amount = NdotL + (attenuation - 1.0) + _Wrap;
@@ -124,18 +123,16 @@ Shader "Custom/DylearnToonGround"
                 float cloud_value = GetCloudNoise(IN.positionWS);
                 diffuse_amount = min(diffuse_amount, cloud_value);
 
-                // 5. TOON STEPPING (Quantization)
+                // 5. TOON STEPPING
                 float cuts_f = (float)_Cuts;
                 float cuts_inv = 1.0 / cuts_f;
                 float original_index = ceil(diffuse_amount * cuts_f);
                 float diffuse_stepped = clamp(original_index * cuts_inv, 0.0, 1.0);
 
-                // 6. FINAL COLOUR ASSEMBLY
-                // Godot: ALBEDO * LIGHT_COLOR / PI
+                // 6. FINAL COLOUR
                 float3 diffuse_final = baseAlbedo * (mainLight.color / 3.14159);
                 diffuse_final *= diffuse_stepped;
 
-                // Simple Ambient (Optional, to prevent pure black)
                 float3 ambient = baseAlbedo * 0.1; 
 
                 return half4(diffuse_final + ambient, 1.0);

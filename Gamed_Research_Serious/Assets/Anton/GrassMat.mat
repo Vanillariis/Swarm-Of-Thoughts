@@ -117,7 +117,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Height: 0.6
+    - _Height: 0.5
     - _Metallic: 0
     - _NoiseScale: 0.09
     - _NoiseScale1: 1.22
@@ -135,7 +135,7 @@ Material:
     - _Step2: 0.37
     - _Surface: 0
     - _TipBrightness: 1.52
-    - _Width: 0.6
+    - _Width: 0.5
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1

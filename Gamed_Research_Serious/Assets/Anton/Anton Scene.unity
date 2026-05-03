@@ -3144,7 +3144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GrassManager
   grassMaterial: {fileID: 2100000, guid: ec17e2425a30d23479f37f029305d311, type: 2}
   computeShader: {fileID: 7200000, guid: a81f7775d0a4aa64f9b9cadef7ce4f60, type: 3}
-  instanceCount: 4008
+  instanceCount: 6000
   bladeWidth: 0.5
   bladeHeight: 0.5
 --- !u!64 &1858759072
@@ -4834,8 +4834,8 @@ Transform:
   m_GameObject: {fileID: 20551660418329914}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7033380817872579310}
@@ -5544,12 +5544,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7307a89b1dee12c4296d3f907a14d5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  animator: {fileID: 8446012225646813885}
   speed: 5
   rotationSpeed: 10
-  walkingAudioSource: {fileID: 908756131}
-  flowerPrefab: {fileID: 3948020927867556633, guid: 5640a5d3d4a64d1469d9a7f6249342c0, type: 3}
   plantDistance: 1.5
+  animator: {fileID: 8446012225646813885}
+  walkingAudioSource: {fileID: 908756131}
 --- !u!1 &8322730644261698306
 GameObject:
   m_ObjectHideFlags: 0
