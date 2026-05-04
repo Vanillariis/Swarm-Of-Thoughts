@@ -8,12 +8,15 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class SelectMarkerScript : MonoBehaviour
 {
+    public PaintScript paintScript;
+    
     [Header("Visual feedback")]
     [Tooltip("Material to apply while selected. Leave empty to skip.")]
     public Material selectedMaterial;
 
     // ── static: which marker is currently held ─────────────────────────────────
     private static SelectMarkerScript _current;
+    
 
     // ── instance state ─────────────────────────────────────────────────────────
     private Camera   _cam;
@@ -56,23 +59,15 @@ public class SelectMarkerScript : MonoBehaviour
 
                 if (clickedMarker == this)
                 {
-                    if (_isSelected)
-                        Deselect(returnToOrigin: true);
-                    else
+                    if (!_isSelected)
                     {
                         if (_current != null && _current != this)
                             _current.Deselect(returnToOrigin: true);
                         Select(mousePos);
                     }
+                    // clicking the already-selected marker does nothing
                 }
-                else if (_isSelected)
-                {
-                    Deselect(returnToOrigin: true);
-                }
-            }
-            else if (_isSelected)
-            {
-                Deselect(returnToOrigin: true);
+                // clicking a non-marker object or empty space does NOT deselect
             }
         }
 
@@ -109,7 +104,35 @@ public class SelectMarkerScript : MonoBehaviour
         if (_renderer != null && selectedMaterial != null)
             _renderer.material = selectedMaterial;
 
-        Debug.Log($"[SelectMarker] Selected: {name}");
+        // Update paint color based on this marker's tag
+        if (paintScript != null)
+            paintScript.currentColor = TagToColor(tag);
+
+        Debug.Log($"[SelectMarker] Selected: {name}  color tag: {tag}");
+    }
+
+    private Color TagToColor(string t)
+    {
+        switch (t.ToLower())
+        {
+            case "red":     return Color.red;
+            case "green":   return Color.green;
+            case "blue":    return Color.blue;
+            case "yellow":  return Color.yellow;
+            case "white":   return Color.white;
+            case "black":   return Color.black;
+            case "cyan":    return Color.cyan;
+            case "magenta": return Color.magenta;
+            case "orange":  return new Color(1f, 0.5f, 0f);
+            case "purple":  return new Color(0.5f, 0f, 0.5f);
+            case "pink":    return new Color(1f, 0.41f, 0.71f);
+            case "brown":   return new Color(0.65f, 0.16f, 0.16f);
+            case "grey":
+            case "gray":    return Color.grey;
+            default:
+                Debug.LogWarning($"[SelectMarker] Unknown color tag '{t}', defaulting to white.");
+                return Color.white;
+        }
     }
 
     void Deselect(bool returnToOrigin)
