@@ -4,8 +4,11 @@ Shader "Custom/GrassShader" {
         
         [Header(Noise Texture Coloring)]
         _NoiseTex ("Color Map Texture (Grayscale)", 2D) = "white" {}
-        _NoiseScale1 ("Base Tiling", Float) = 0.02
-        _NoiseScale2 ("Detail Tiling (Break Tiling)", Float) = 0.077
+        _NoiseBlur ("Noise Softness", Range(0, 0.02)) = 0.005
+        
+        [Header(Anti Tiling Settings)]
+        _DetailScale ("Detail Layer Scale", Float) = 2.17
+        _DetailWeight ("Detail Layer Strength", Range(0, 1)) = 0.5
         
         [Header(Color Thresholds)]
         _ColorA ("Color A (Low)", Color) = (0.1, 0.4, 0.1, 1)
@@ -43,9 +46,21 @@ Shader "Custom/GrassShader" {
             float4 _NoiseTex_ST; 
 
             float4 _ColorA, _ColorB, _ColorC;
-            float _Step1, _Step2;
-            float _NoiseScale1, _NoiseScale2;
+            float _Step1, _Step2, _NoiseBlur;
+            float _DetailScale, _DetailWeight;
             float _TipBrightness, _Width, _Height;
+
+            // Ported blurred sampling helper for Vertex Shader
+            float SampleNoiseBlurred(float2 uv, float blur)
+            {
+                float d = blur;
+                // tex2Dlod is required when sampling textures in the Vertex Shader
+                float n1 = tex2Dlod(_NoiseTex, float4(uv + float2(-d, -d), 0, 0)).r;
+                float n2 = tex2Dlod(_NoiseTex, float4(uv + float2( d, -d), 0, 0)).r;
+                float n3 = tex2Dlod(_NoiseTex, float4(uv + float2(-d,  d), 0, 0)).r;
+                float n4 = tex2Dlod(_NoiseTex, float4(uv + float2( d,  d), 0, 0)).r;
+                return (n1 + n2 + n3 + n4) * 0.25;
+            }
 
             v2f vert (appdata_full v, uint instanceID : SV_InstanceID) {
                 v2f o;
@@ -53,25 +68,26 @@ Shader "Custom/GrassShader" {
                 float4 data = _GrassDataBuffer[instanceID].position;
                 float3 worldPos = data.xyz;
 
-                // --- FIX 1: BREAK TILING ---
-                // Sample 1: Large scale base
-                float2 uv1 = worldPos.xz * _NoiseScale1 + _NoiseTex_ST.zw;
-                float n1 = tex2Dlod(_NoiseTex, float4(uv1, 0, 0)).r;
+                // --- MATCHING GROUND COLOUR LOGIC ---
+                
+                // Layer 1: Base Noise (Uses Tiling/Offset from Inspector)
+                float2 uv1 = worldPos.xz * _NoiseTex_ST.xy + _NoiseTex_ST.zw;
+                float noiseBase = SampleNoiseBlurred(uv1, _NoiseBlur);
 
-                // Sample 2: Faster, smaller scale, shifted offset
-                float2 uv2 = worldPos.xz * _NoiseScale2 + float2(0.5, 0.2);
-                float n2 = tex2Dlod(_NoiseTex, float4(uv2, 0, 0)).r;
+                // Layer 2: Detail Noise (Matches the 0.53, 0.11 offset from ground shader)
+                float2 uv2 = (worldPos.xz * _NoiseTex_ST.xy * _DetailScale) + float2(0.53, 0.11);
+                float noiseDetail = SampleNoiseBlurred(uv2, _NoiseBlur * _DetailScale);
 
-                // Blend them (average) to create a non-repeating pattern
-                float noiseVal = (n1 + n2) * 0.5;
+                // Combine exactly like the ground shader
+                float noiseVal = lerp(noiseBase, noiseDetail, _DetailWeight);
 
-                // --- FIX 2: ADJUSTABLE THRESHOLDS ---
+                // Threshold Selection
                 float3 patchColor;
                 if (noiseVal < _Step1) patchColor = _ColorA.rgb;
                 else if (noiseVal < _Step2) patchColor = _ColorB.rgb;
                 else patchColor = _ColorC.rgb;
 
-                // Billboarding & Wind
+                // --- BILLBOARDING & WIND ---
                 float3 vRight = UNITY_MATRIX_V[0].xyz; 
                 float3 vUp = float3(0, 1, 0); 
                 float3 billboardOffset = (vRight * v.vertex.x * _Width) + (vUp * (v.vertex.y + 0.5) * _Height);

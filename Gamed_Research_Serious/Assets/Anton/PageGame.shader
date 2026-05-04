@@ -92,24 +92,39 @@ Shader "Custom/PageGame"
                 // 1. Setup Data
                 float2 uv = IN.uv;
                 half4 texColor = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, uv) * _BaseColor;
-                
-                // CRITICAL: Normals must be re-normalized in the fragment shader!
                 float3 normalWS = normalize(IN.normalWS);
-                
+    
                 // 2. Main Light (Directional Light)
                 float4 shadowCoord = TransformWorldToShadowCoord(IN.positionWS);
                 Light mainLight = GetMainLight(shadowCoord);
-                
-                // Calculate Diffuse Lighting (Standard Lambert)
-                // If this is still dark, your light is pointing at the back of the object
+    
                 half NdotL = saturate(dot(normalWS, mainLight.direction));
-                
-                // 3. Ambient Lighting (Environment)
+                half3 directLight = mainLight.color * (NdotL * mainLight.shadowAttenuation);
+    
+                // 3. Additional Lights (Point Lights, Spot Lights)
+                half3 additionalLightSum = half3(0, 0, 0);
+    
+                // Get the total number of non-directional lights affecting this object
+                uint pixelLightCount = GetAdditionalLightsCount();
+    
+                for (uint lightIndex = 0u; lightIndex < pixelLightCount; ++lightIndex)
+                {
+                    // Get light data (attenuation, color, direction)
+                    // Note: For URP 10+, use GetAdditionalLight(lightIndex, IN.positionWS);
+                    Light light = GetAdditionalLight(lightIndex, IN.positionWS);
+        
+                    half3 attenuatedLightColor = light.color * (light.distanceAttenuation * light.shadowAttenuation);
+                    half lightNdotL = saturate(dot(normalWS, light.direction));
+        
+                    additionalLightSum += attenuatedLightColor * lightNdotL;
+                }
+
+                // 4. Ambient Lighting (Environment)
                 half3 ambient = SampleSH(normalWS) * texColor.rgb;
 
-                // 4. Combine Direct Light + Shadow + Ambient
-                half3 directLight = mainLight.color * (NdotL * mainLight.shadowAttenuation);
-                half3 finalRGB = (directLight * texColor.rgb) + ambient;
+                // 5. Combine everything
+                // Final color = (Main Light + Additional Lights) * Texture + Ambient
+                half3 finalRGB = ((directLight + additionalLightSum) * texColor.rgb) + ambient;
 
                 return half4(finalRGB, texColor.a);
             }
