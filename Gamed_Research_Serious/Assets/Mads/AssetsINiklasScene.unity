@@ -2440,7 +2440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79746c91b0d36ee48b29292a2e5f79d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PaintScript
-  currentColor: {r: 0.13381095, g: 0.8756569, b: 0.9150943, a: 1}
+  currentColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1264139369 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1591794784168596309, guid: 4c8327d8c8760da46b6999cb01935f3a, type: 3}

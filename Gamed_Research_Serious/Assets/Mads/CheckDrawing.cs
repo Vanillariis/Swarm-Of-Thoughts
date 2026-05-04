@@ -35,20 +35,23 @@ public class CheckDrawing : MonoBehaviour
 
     private bool AllPanelsPainted()
     {
+        int unpaintedCount = 0;
+        const int allowedUnpainted = 5;
+
         foreach (Transform child in colorPanel.transform)
         {
             SpriteRenderer sr = child.GetComponent<SpriteRenderer>();
             if (sr == null) continue;
 
             Color c = sr.color;
-            // Treat the panel as unpainted if its color is white (or very close to it)
             if (Mathf.Approximately(c.r, 1f) &&
                 Mathf.Approximately(c.g, 1f) &&
                 Mathf.Approximately(c.b, 1f))
             {
-                return false;
+                unpaintedCount++;
             }
         }
-        return true;
+
+        return unpaintedCount <= allowedUnpainted;
     }
 }
