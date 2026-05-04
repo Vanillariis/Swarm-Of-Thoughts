@@ -7,6 +7,12 @@ TagManager:
   - Wall
   - Enemy
   - Ground
+  - Blue
+  - Red
+  - Green
+  - Orange
+  - Purple
+  - Cyan
   layers:
   - Default
   - TransparentFX
