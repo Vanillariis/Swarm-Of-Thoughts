@@ -2245,7 +2245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 177.1}
+  m_AnchoredPosition: {x: 0, y: 265.39}
   m_SizeDelta: {x: 1500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &855703601
@@ -2268,9 +2268,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Balancing free time and university can be hard.\n\n How do you personally
-    balance this? \n\nSee other user's advice in the flowers, and plant your own
-    with 'f'."
+  m_text: "Thoughts will come and go, but you do not have to engage with them.\n\nYou
+    can acknowledge that they are there, but let them pass like leaves in the wind.
+    \n\nAllow yourself to relax!\n\nSee other user's advice in the flowers, and plant
+    your own with 'f'."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
