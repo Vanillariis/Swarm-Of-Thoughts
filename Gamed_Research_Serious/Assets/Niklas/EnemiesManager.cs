@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemiesManager : MonoBehaviour
 {
@@ -152,9 +153,13 @@ public class EnemiesManager : MonoBehaviour
 
             Debug.Log("You are too stressed!");
             StopCoroutine(StartWaveWithDelay());
-
-            // SceneManager.LoadScene("GameOver");
+            
             // load scene skift her :)
+        }
+        
+        if (stressControl.spread <= 0.01f && isGameOver)
+        {
+            SceneManager.LoadScene("Anton Scene");
         }
     }
 }
