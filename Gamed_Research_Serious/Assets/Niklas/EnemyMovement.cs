@@ -68,6 +68,11 @@ public class EnemyMovement : MonoBehaviour
             PlayerMovementShadow player = collision.GetComponent<PlayerMovementShadow>();
             player.playerHealth -= 1;
 
+            if (AudioDistortManager.Instance != null)
+            {
+                AudioDistortManager.Instance.TriggerHitDistortion();
+            }
+
             manager.OnEnemyDestroyed(rt);
             Destroy(gameObject);
         }

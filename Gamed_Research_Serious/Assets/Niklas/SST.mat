@@ -127,7 +127,7 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SpreadAmount: 0.6
+    - _SpreadAmount: 0.0101727825
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
