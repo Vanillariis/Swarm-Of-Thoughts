@@ -59,23 +59,15 @@ public class SelectMarkerScript : MonoBehaviour
 
                 if (clickedMarker == this)
                 {
-                    if (_isSelected)
-                        Deselect(returnToOrigin: true);
-                    else
+                    if (!_isSelected)
                     {
                         if (_current != null && _current != this)
                             _current.Deselect(returnToOrigin: true);
                         Select(mousePos);
                     }
+                    // clicking the already-selected marker does nothing
                 }
-                else if (_isSelected)
-                {
-                    Deselect(returnToOrigin: true);
-                }
-            }
-            else if (_isSelected)
-            {
-                Deselect(returnToOrigin: true);
+                // clicking a non-marker object or empty space does NOT deselect
             }
         }
 
