@@ -87,8 +87,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8efa49370c3e672449f0e562cd08759f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  normalSpeed: 250
-  entrySpeed: 800
+  normalSpeed: 500
+  entrySpeed: 2000
   manager: {fileID: 0}
 --- !u!61 &1256937621155328052
 BoxCollider2D:

@@ -2,8 +2,8 @@
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float normalSpeed = 100f;
-    public float entrySpeed = 400f;
+    public float normalSpeed = 300f;
+    public float entrySpeed = 800f;
 
     private float currentSpeed;
 
