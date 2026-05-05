@@ -88,14 +88,63 @@ public class EnemiesManager : MonoBehaviour
 
         RectTransform rt = enemy.GetComponent<RectTransform>();
 
-        float x = Random.Range(-canvas.rect.width / 2 - 450f,-canvas.rect.width / 2 - 100f);
+        float x = Random.Range(-canvas.rect.width / 2 - 2850f,-canvas.rect.width / 2 - 100f);
 
         Vector2 spawnPos;
         int attempts = 0;
 
         do
         {
-            float y = Random.Range(-canvas.rect.height / 2, canvas.rect.height / 2);
+            RectTransform playerRT = player.GetComponent<RectTransform>();
+            float playerY = playerRT.anchoredPosition.y;
+
+            float canvasHeight = canvas.rect.height;
+
+            float[] yOffsets = new float[]
+            {
+                -canvasHeight * 0.3f,
+                -canvasHeight * 0.15f,
+                    0f,
+                    canvasHeight * 0.15f,
+                    canvasHeight * 0.3f
+            };
+
+            // Copy list so we can remove used ones
+            List<float> availableOffsets = new List<float>(yOffsets);
+
+            // Remove offsets that are already occupied
+            foreach (RectTransform enemyRT in activeEnemies)
+            {
+                float usedOffset = enemyRT.anchoredPosition.y - playerY;
+
+                availableOffsets.RemoveAll(o => Mathf.Abs(o - usedOffset) < 20f);
+            }
+
+            // Pick a free offset if possible
+            float y;
+
+            // Try to use center lane first
+            if (availableOffsets.Contains(0f))
+            {
+                y = playerY; // force center
+            }
+            else if (availableOffsets.Count > 0)
+            {
+                y = playerY + availableOffsets[Random.Range(0, availableOffsets.Count)];
+            }
+            else
+            {
+                y = playerY + Random.Range(-100f, 100f);
+            }
+            
+
+            float halfHeight = canvas.rect.height / 2f;
+            float padding = rt.rect.height / 2f;
+
+            y = Mathf.Clamp(y, -halfHeight + padding, halfHeight - padding);
+
+            spawnPos = new Vector2(x, y);
+
             spawnPos = new Vector2(x, y);
             attempts++;
 
@@ -120,9 +169,7 @@ public class EnemiesManager : MonoBehaviour
     {
         foreach (RectTransform enemy in activeEnemies)
         {
-            float minYDistance = enemy.rect.height + 10f;
-
-            if (Mathf.Abs(enemy.anchoredPosition.y - pos.y) < minYDistance)
+            if (Mathf.Abs(enemy.anchoredPosition.y - pos.y) < 80f)
                 return false;
         }
         return true;
