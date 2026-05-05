@@ -1203,6 +1203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dde8f9ba20422243b03cdcba724799a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioDistortManager
+  normalMusic: {fileID: 1341440262}
+  eerieMusic: {fileID: 821137652}
   distortIntensity: 0.8
   pitchDrop: 0.8
   effectDuration: 0.2
@@ -1228,6 +1230,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 0.5921569, b: 0.3764706, a: 1}
   eerieColor: {r: 1, g: 0, b: 0, a: 1}
   lightChangeSpeed: 2
+  eerieDuration: 8
 --- !u!4 &748880197
 Transform:
   m_ObjectHideFlags: 0
@@ -1725,7 +1728,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2001,7 +2004,7 @@ Transform:
   m_GameObject: {fileID: 1062660399}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 2.08, z: -5.08}
+  m_LocalPosition: {x: 0.14, y: 1.62, z: -2.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2564,7 +2567,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5025,7 +5028,6 @@ GameObject:
   - component: {fileID: 9149732815507134065}
   - component: {fileID: 881676893031770980}
   - component: {fileID: 6668749054343986005}
-  - component: {fileID: 9149732815507134066}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -11452,22 +11454,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2269224298069757440}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9149732815507134066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114316334187765157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dde8f9ba20422243b03cdcba724799a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioDistortManager
-  distortIntensity: 0.8
-  pitchDrop: 0.8
-  effectDuration: 0.2
-  recoverySpeed: 5
 --- !u!1 &9181873656790704236
 GameObject:
   m_ObjectHideFlags: 0

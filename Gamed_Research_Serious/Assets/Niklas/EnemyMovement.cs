@@ -73,6 +73,8 @@ public class EnemyMovement : MonoBehaviour
                 AudioDistortManager.Instance.TriggerHitDistortion();
             }
 
+            EnvironmentManager.Instance.ChangeState(GameState.Eerie);
+
             manager.OnEnemyDestroyed(rt);
             Destroy(gameObject);
         }
