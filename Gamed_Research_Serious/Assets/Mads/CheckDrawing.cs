@@ -1,12 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CheckDrawing : MonoBehaviour
 {
     public GameObject colorPanel;
     
     public EnemiesManager enemiesManager;
+
+    public GameObject submitButton;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,7 +20,7 @@ public class CheckDrawing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        submitButton.SetActive(AllPanelsPainted());
     }
 
     public void drawingSubmit()
@@ -36,7 +39,7 @@ public class CheckDrawing : MonoBehaviour
     private bool AllPanelsPainted()
     {
         int unpaintedCount = 0;
-        const int allowedUnpainted = 10;
+        const int allowedUnpainted = 15;
 
         foreach (Transform child in colorPanel.transform)
         {
