@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Niklas/TitelScfeen.unity
+    guid: 8ddcd4c195867304d9bd34815fd352f8
+  - enabled: 1
     path: Assets/Mads/AssetsINiklasScene.unity
     guid: 29180a7c112607940983616a0fadae99
   - enabled: 1
