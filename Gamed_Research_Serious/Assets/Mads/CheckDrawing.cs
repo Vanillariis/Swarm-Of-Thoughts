@@ -39,7 +39,7 @@ public class CheckDrawing : MonoBehaviour
     private bool AllPanelsPainted()
     {
         int unpaintedCount = 0;
-        const int allowedUnpainted = 15;
+        const int allowedUnpainted = 20;
 
         foreach (Transform child in colorPanel.transform)
         {
