@@ -33,12 +33,32 @@ public class FlowerManager : MonoBehaviour
 
     private void Start()
     {
-        // DeleteSavedFlowers();
-
         writeCommentPanel.SetActive(false);
         showCommentPanel.SetActive(false);
 
+        SetupCommentInputField();
+
         LoadFlowers();
+    }
+
+    private void SetupCommentInputField()
+    {
+        if (commentInputField == null)
+            return;
+
+        commentInputField.lineType = TMP_InputField.LineType.MultiLineNewline;
+
+        if (commentInputField.textComponent != null)
+        {
+            commentInputField.textComponent.textWrappingMode = TextWrappingModes.Normal;
+            commentInputField.textComponent.overflowMode = TextOverflowModes.Overflow;
+        }
+
+        if (commentInputField.placeholder is TMP_Text placeholderText)
+        {
+            placeholderText.textWrappingMode = TextWrappingModes.Normal;
+            placeholderText.overflowMode = TextOverflowModes.Overflow;
+        }
     }
 
     public void PlantFlower(Vector3 position)
@@ -51,11 +71,12 @@ public class FlowerManager : MonoBehaviour
 
         pendingFlower = flowerObj.GetComponent<FlowerLogic>();
 
-        // 🔊 Play planting sound
         if (plantAudioSource != null && plantSound != null)
         {
             plantAudioSource.PlayOneShot(plantSound);
         }
+
+        SetupCommentInputField();
 
         commentInputField.text = "";
         writeCommentPanel.SetActive(true);
@@ -73,9 +94,6 @@ public class FlowerManager : MonoBehaviour
 
         pendingFlower.SetComment(comment);
         SaveFlower(pendingFlower.transform.position, comment);
-
-        Debug.Log("Saved comment: " + comment);
-        Debug.Log("Saved to: " + savePath);
 
         pendingFlower = null;
         commentInputField.text = "";
@@ -122,6 +140,9 @@ public class FlowerManager : MonoBehaviour
             return;
 
         showCommentText.text = comment;
+        showCommentText.textWrappingMode = TextWrappingModes.Normal;
+        showCommentText.overflowMode = TextOverflowModes.Overflow;
+
         showCommentPanel.SetActive(true);
     }
 

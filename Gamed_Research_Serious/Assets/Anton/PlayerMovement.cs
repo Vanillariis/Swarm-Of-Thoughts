@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Audio")]
     public AudioSource walkingAudioSource;
 
+    [Header("UI")]
+    public GameObject writeCommentPanel;
+
     private Rigidbody rb;
     private Vector2 moveInput;
     private Vector3 moveDirection;
@@ -27,6 +30,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (IsWritingComment())
+        {
+            StopPlayerMovement();
+            return;
+        }
+
         ApplyMovement();
         ApplyRotation();
         HandleWalkingSound();
@@ -35,18 +44,49 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
+        if (IsWritingComment())
+        {
+            moveInput = Vector2.zero;
+            moveDirection = Vector3.zero;
+            return;
+        }
+
         moveInput = context.ReadValue<Vector2>();
         moveDirection = new Vector3(moveInput.x, 0f, moveInput.y);
     }
 
     public void Plant(InputAction.CallbackContext context)
     {
-        if (!context.performed) return;
+        if (IsWritingComment())
+            return;
+
+        if (!context.performed)
+            return;
 
         Vector3 spawnPos = transform.position + transform.forward * plantDistance;
         spawnPos.y = transform.position.y;
 
         FlowerManager.Instance.PlantFlower(spawnPos);
+    }
+
+    private bool IsWritingComment()
+    {
+        return writeCommentPanel != null && writeCommentPanel.activeInHierarchy;
+    }
+
+    private void StopPlayerMovement()
+    {
+        moveInput = Vector2.zero;
+        moveDirection = Vector3.zero;
+
+        rb.linearVelocity = new Vector3(0f, rb.linearVelocity.y, 0f);
+
+        if (walkingAudioSource != null && walkingAudioSource.isPlaying)
+        {
+            walkingAudioSource.Stop();
+        }
+
+        UpdateAnimation();
     }
 
     private void ApplyMovement()
