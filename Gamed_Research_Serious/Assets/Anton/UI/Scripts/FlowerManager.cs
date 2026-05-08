@@ -33,6 +33,8 @@ public class FlowerManager : MonoBehaviour
 
     private void Start()
     {
+        //DeleteSavedFlowers();
+        
         writeCommentPanel.SetActive(false);
         showCommentPanel.SetActive(false);
 
