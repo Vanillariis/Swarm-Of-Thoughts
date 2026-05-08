@@ -4737,7 +4737,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f29b969763d653248b4bdb634d1e5ff6, type: 2}
     - target: {fileID: -4484548491226920214, guid: 28d3979c38a7bc64f8f41f8eb8fea33f, type: 3}
       propertyPath: m_Name
-      value: Perwinkle
+      value: Periwinkle
       objectReference: {fileID: 0}
     - target: {fileID: -4177521673821583693, guid: 28d3979c38a7bc64f8f41f8eb8fea33f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -12347,6 +12347,7 @@ GameObject:
   - component: {fileID: 1820810881784349461}
   - component: {fileID: 6923219412544712427}
   - component: {fileID: 2308822997188677966}
+  - component: {fileID: 8764449841819921742}
   m_Layer: 0
   m_Name: PaintTube.001
   m_TagString: Untagged
@@ -12354,6 +12355,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8764449841819921742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8764449841819921741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bffea01b045486bb8813aa2ccab248c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorPreviewDisplay
+  paintScript: {fileID: 1258202306}
 --- !u!33 &8792934815201606163
 MeshFilter:
   m_ObjectHideFlags: 0
